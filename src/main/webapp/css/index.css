@@ -1,0 +1,22 @@
+body {
+  background-color: rgb(215, 232, 215);
+}
+
+form {
+    text-align: center;
+  }
+
+label {
+    padding-right: 10px;
+}
+
+.submit {
+  float: right;
+}
+
+table {
+  margin: auto;
+  border-collapse: separate;
+  border-spacing: 0px 10px;
+  text-align: left;
+}
