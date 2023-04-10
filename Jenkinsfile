@@ -26,13 +26,9 @@ pipeline {
         }
         stage("Deploying to Rancher as a single pod") {
             steps {
-                sh "kubectl set image deployment/swe-hw2-pipeline swe-hw2-pipeline=prafulladevi/swe645-project2:${BUILD_TIMESTAMP} -n jenkins-pipeline"
+                sh "kubectl set image deployment/deployment container-0=prafulladevi/swe645-project2:${BUILD_TIMESTAMP} -n namespace645"
             }
         }
-        stage("Deploying to Rancher as with load balancer") {
-            steps {
-                sh "kubectl set image deployment/swe-hw2-lb swe-hw2-lb=prafulladevi/swe645-project2:${BUILD_TIMESTAMP} -n jenkins-pipeline"
-            }
-        }
+        
     }
 }
