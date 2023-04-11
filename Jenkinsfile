@@ -8,6 +8,7 @@ pipeline {
             steps {
                 script {
                     checkout scm
+                    sh 'ls'
                     sh "cd src/main/webapp && jar -cvf SWE-645-HW1.war *"
                     DATE_TAG = java.time.LocalDate.now()
                     DATETIME_TAG = java.time.LocalDateTime.now()
