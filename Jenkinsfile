@@ -4,7 +4,7 @@ pipeline {
         DOCKERHUB_PASS = credentials('docker-pass')
     }
     stages {
-        stage("Building the Student Survey Image") {
+        stage("Build and create") {
             steps {
                 script {
                     checkout scm
@@ -18,7 +18,7 @@ pipeline {
                 }
             }
         }
-        stage("Pushing Image to DockerHub") {
+        stage("Pushing Image") {
             steps {
                 script {
                     sh "sudo docker push prafulladevi/swe645-project2:${BUILD_TIMESTAMP}"
