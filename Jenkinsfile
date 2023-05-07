@@ -25,11 +25,11 @@ pipeline {
                 }
             }
         }
-        stage("Deploying to Rancher as a single pod") {
+       /*stage("Deploying to Rancher as a single pod") {
             steps {
                 sh "kubectl set image deployment/deployment container-0=prafulladevi/swe645-project2:${BUILD_TIMESTAMP} -n namespace645"
             }
-        }
+        }*/
         
     }
 }
